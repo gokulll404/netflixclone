@@ -1,0 +1,64 @@
+.row {
+  color: #fff;
+  margin-left: 20px;
+  margin-bottom: 40px;
+}
+
+.row-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.row-cards {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 10px;
+  scroll-behavior: smooth;
+  gap: 10px;
+}
+
+/* Hide scrollbar */
+.row-cards::-webkit-scrollbar {
+  display: none;
+}
+
+.row-cards {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.row-cards::-webkit-scrollbar {
+  display: none;
+  /* hide scrollbar */
+}
+
+/* Each movie card inside the row */
+.row-cards .movie-card {
+  max-height: 200px;
+  object-fit: contain;
+  margin-right: 10px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Hover effect like Netflix */
+.row-cards .movie-card:hover {
+  transform: scale(1.1);
+  opacity: 1;
+  z-index: 2;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .row-title {
+    font-size: 1.2rem;
+  }
+
+  .row-cards .movie-card {
+    max-height: 150px;
+  }
+}

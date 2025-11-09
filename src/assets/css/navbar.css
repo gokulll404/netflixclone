@@ -1,0 +1,119 @@
+/* Netflix-style Navbar */
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 14px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.85), transparent);
+  z-index: 100;
+  transition: background 0.3s ease;
+}
+
+/* Left section */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Netflix logo */
+.logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #e50914;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+/* Navigation links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  color: #fff;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav-links li:hover {
+  color: #e50914;
+}
+
+/* Right section */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Search input */
+.search {
+  background: rgba(255, 255, 255, 0.336);
+  border: none;
+  outline: none;
+  color: #ffffff;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  width: 140px;
+  transition: background 0.3s ease, width 0.3s ease;
+}
+
+.search::placeholder {
+  color: #aaa;             /* placeholder text color */
+  font-style: italic;      /* optional style */
+  opacity: 1;              /* make sure it’s fully visible */
+}
+
+.search:focus {
+  background: rgba(255, 255, 255, 0.792);
+  width: 180px;
+}
+
+/* Avatar (profile icon) */
+.avatar {
+  width: 34px;
+  height: 34px;
+  background: #222;
+  color: #fff;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  margin-left: 38px;
+    position: relative;
+    right: 37px;
+}
+
+.avatar:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .nav {
+    padding: 12px 18px;
+  }
+
+  .nav-links {
+    display: none; /* hide links on smaller screens */
+  }
+
+  .search {
+    width: 120px;
+  }
+}
