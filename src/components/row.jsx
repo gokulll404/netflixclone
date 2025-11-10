@@ -1,13 +1,12 @@
-// Row.jsx
 import MovieCard from "./moviecard";
 import "../assets/css/row.css";
 
-export default function Row({ title, fetchUrl }) {
+export default function Row(props) {
   return (
     <section className="row">
-      <h2 className="row-title">{title}</h2>
+      <h2 className="row-title">{props.title}</h2>
       <div className="row-cards">
-        <MovieCard url={fetchUrl} />
+        <MovieCard url={props.fetchUrl} />
       </div>
     </section>
   );

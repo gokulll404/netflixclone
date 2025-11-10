@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from './components/navbar.jsx'
 import Banner from './components/banner.jsx'
 import Row from './components/row.jsx'
+import Faq from './components/faq.jsx'
 import './App.css'
 
 
@@ -15,8 +16,12 @@ const App = () => {
       <Navbar />
       <Banner />
       <Row
-        title="NETFLIX ORIGINALS"
+        title="Netflix Originals"
         fetchUrl={`${API_URL}/discover/tv?api_key=${API_KEY}&with_networks=213`}
+      />
+      <Row
+        title="Action Movies"
+        fetchUrl={`${API_URL}/discover/movie?api_key=${API_KEY}&with_genres=28`}
       />
       <Row
         title="Trending Now"
@@ -26,10 +31,7 @@ const App = () => {
         title="Top Rated"
         fetchUrl={`${API_URL}/movie/top_rated?api_key=${API_KEY}&language=en-US`}
       />
-      <Row
-        title="Action Movies"
-        fetchUrl={`${API_URL}/discover/movie?api_key=${API_KEY}&with_genres=28`}
-      />
+
     </div>
   )
 }

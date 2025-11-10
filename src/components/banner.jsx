@@ -23,6 +23,7 @@ export default function Banner() {
   }, []);
 
 
+
   if (!movie) {
     return (
       <header className="banner">
