@@ -10,7 +10,7 @@ const IMAGE_BASE_URL = import.meta.env.VITE_IMAGE_BASE_URL;
 
 export default function Banner() {
 
-  const [movie, ] = useState(null);
+  const [movie, setMovie] = useState(null);
 
   useEffect(() => {
     axios.get(`${API_URL}/trending/all/week?api_key=${API_KEY}&language=en-US`)
