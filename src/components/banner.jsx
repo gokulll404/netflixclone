@@ -15,7 +15,7 @@ export default function Banner() {
   useEffect(() => {
     axios.get(`${API_URL}/trending/all/week?api_key=${API_KEY}&language=en-US`)
       .then((response) => {
-        const trendingMovies = response.data.results[0];
+        const trendingMovies = response.data.results[8];
         console.log(trendingMovies);
         setMovie(trendingMovies)
       })
